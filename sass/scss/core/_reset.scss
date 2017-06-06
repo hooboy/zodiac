@@ -1,0 +1,143 @@
+// Reset android&ipad
+body,h1,h2,h3,h4,h5,h6,p,dl,dd,ol,ul,th,td,fieldset,input,button,textarea,form,canvas,audio,video,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary {
+	margin: 0;
+	padding: 0;
+	font-family: $base-font-family;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary {
+	display: block;
+}
+
+audio,canvas,video {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	word-wrap: break-word;
+}
+
+h1,h2,h3 {
+	// font-size: 100%;
+}
+
+ol,ul {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	empty-cells: show;
+	font-size: inherit;
+}
+
+img, object, embed {
+	max-width: 100%;
+	height: auto;
+}
+
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+
+cite,em,s,i,b{
+	font-style: normal;
+}
+
+input,button,textarea,select{
+	font-size: 100%;
+}
+
+body,input,button,textarea,select,option{
+	font-size: normal;
+}
+
+a,input,textarea {
+	text-decoration: none;
+	outline: 0;
+	// -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+li,img,label,input {
+	vertical-align: middle;
+}
+
+var {
+	font-style: normal;
+}
+
+ins {
+	text-decoration: none;
+}
+
+abbr, acronym {
+	border:0;
+	font-variant: normal;
+}
+
+sup {
+	vertical-align: text-top;
+}
+
+sub {
+	vertical-align: text-bottom;
+}
+
+button,select {
+	text-transform: none;
+}
+
+button[disabled],html input[disabled] {
+	cursor: default;
+}
+
+input[type="checkbox"],input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+	*height: 13px;
+	*width: 13px;
+}
+
+button,input,select,textarea {
+	margin: 0;
+	vertical-align: baseline;
+	*vertical-align: middle;
+}
+
+button::-moz-focus-inner,input[type="reset"]::-moz-focus-inner,input[type="button"]::-moz-focus-inner,input[type="submit"]::-moz-focus-inner,input[type="file"]>input[type="button"]::-moz-focus-inner {
+	border: none;
+	padding: 0;
+}
+
+button,html input[type="button"],input[type="reset"],input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+	*overflow: visible;
+}
+
+a:link, a:visited {
+	color: #b2b2b2;
+}
+
+a:hover {
+	color: #00925f;
+}
+
+html {
+	font-size: 24px;
+}
+
+body {
+	color: #2b2b2b;
+}
+
+.viewport {
+	max-width: 720px;
+	margin: 0 auto;
+}

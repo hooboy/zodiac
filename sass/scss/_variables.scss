@@ -1,0 +1,78 @@
+$base-font-size: 100% !default;
+$base-font-family: "Myriad Pro",Arial,Verdana,"Times New Roman",Times,Helvetica,"Droid Sans","microsoft yahei","SimSun","SimHei",sans-serif;
+$base-font-serif: "Myriad Pro",Arial,Verdana,"Times New Roman",Times,Helvetica,sans-serif;
+
+// $imgurl: '/';
+$imgurl: '../images/';
+// $imgurl: '/m/2015/tasting/images/';
+// $imgurl: '/static/product/r5/images/';
+
+// Version
+$v: '20151014164038';
+
+// $bgc APP Background Color
+$bgc: #ebeced;
+
+// $wc White
+$wc: #FFF;
+
+// Font Color
+$c: #51545A;
+
+// gray color
+$gc: #87888C;
+$gc2: #F7F8FA;
+$gc3: #818286;
+
+// orange color
+$oc: #FC6500;
+$oc2: #FF6C06;
+$oc3: #FD6500;
+$oc4: #E74F17;
+
+// boder color
+$bc: #D7D7D7;
+$bc2: #E5E5E5;
+$bc3: #D4D4D6;
+$bc4: #DCDCDC;
+
+// .imgurl
+$imgc: #F5F5F6;
+
+// Font Size
+$fz20: (20em/20);
+$fz25: (25em/20);
+$fz27: (27em/20);
+$fz34: (34em/20);
+$fz32: (32em/20);
+$fz30: (30em/20);
+$fz36: (36em/20);
+$fz46: (46em/20);
+
+$em-base: 24;
+
+@function strip-unit($num) {
+	@return $num / ($num * 0 + 1);
+}
+
+@function toEm($value) {
+	$value: strip-unit($value) / strip-unit($em-base) * 1em;
+	@if ($value == 0em) {$value: 0;}
+	@return $value;
+}
+
+@function emOut($values...) {
+	$lens: length($values);
+	@if $lens == 1 { @return toEm(nth($values, 1)); }
+	$emValues: ();
+	@for $i from 1 through $lens {
+		$emValues: append($emValues, toEm(nth($values, $i)));
+	}
+	@return $emValues;
+}
+
+@function pxToem( $pixel, $base-size:$em-base ) {
+	$pixel: strip-unit($pixel);
+	$base-size: strip-unit($base-size);
+	@return #{$pixel / $base-size}em;
+}

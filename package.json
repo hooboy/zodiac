@@ -1,0 +1,38 @@
+{
+  "name": "chicks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"yarn run serve\" \"yarn run sass:watch\" \"yarn run js:watch\" ",
+    "dev": "concurrently \"yarn run sass\" \"gulp js:global\" \"gulp js\"",
+    "build": "yarn run dev && rimraf dist && mkdirp dist && ncp images dist/images && ncp js dist/js && ncp css dist/css && ncp index.html dist/index.html && ncp timeover.html dist/timeover.html",
+    "serve": "lite-server",
+    "sass": "gulp sass",
+    "sass:watch": "gulp sass:watch",
+    "js:watch": "gulp js:watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.18.8",
+    "concurrently": "^3.4.0",
+    "cross-env": "^4.0.0",
+    "gulp": "^3.9.1",
+    "gulp-changed": "^2.0.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-size": "^2.1.0",
+    "gulp-uglify": "^2.1.2",
+    "mkdirp": "^0.5.1",
+    "ncp": "^2.0.0",
+    "rimraf": "^2.6.1"
+  },
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <title>小鸡，哪里逃？砸中小鸡 惊喜+++ - 即有分期</title>
+        <link type="text/css" rel="stylesheet" href="css/base.min.css" />
+        <link type="text/css" rel="stylesheet" href="css/app.min.css" />
+
+        <script>
+        var isMobile = navigator.userAgent.search(/(iPhone|iPod|iPad|Android|BlackBerry|BB10|Windows Phone|Tizen|Bada)/);
+
+        if( !~isMobile ) {
+            //window.location.href = "";
+        }
+        </script>
+    </head>
+
+    <body>
+        <div class="viewport">
+            <div class="over-top">
+                <div class="over-poster"><img src="images/over-poster.jpg" alt=""></div>
+                <div class="over-container">
+                    <div class="gold"><sup>&yen;</sup><span id="over-round">0.00</span></div>
+                    <a href="javascript:;" class="button btn-receive" id="go-pickup">领取红包</a>
+                    <a href="index.html" class="button btn-replay">再玩一次</a>
+                    <a href="#modal-shareto" class="button btn-share">分享</a>
+                </div>
+            </div>
+            <div class="history-wrapper">
+                <div class="history-title">历史成绩</div>
+                <div class="history-container">
+                    <div class="history-space"><span></span></div>
+                    <div class="history-content">
+                        <div class="history">
+                            <div class="history-grid">
+                                <div class="history-thead">
+                                    <div class="cell">次数</div>
+                                    <div class="cell">成绩</div>
+                                    <div class="cell">游戏时间</div>
+                                    <div class="cell">操作</div>
+                                </div>
+                                <div class="history-tbody" id="prize">
+                                    <p>还没有历史成绩！</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="dafy-modal timeover-modal" id="modal-success" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+            <div class="modal-inner">
+                <section class="modal-section">
+                    <header class="modal-header">
+                        <div class="m-image"><img src="images/chicken-wing.png" alt=""></div>
+                        <a href="#" class="dy-modal-close" data-close="关闭" data-dismiss="modal">关闭</a>
+                        <div class="amount modal-amount">0.00</div>
+                    </header>
+                    <div class="modal-content">
+                        <div class="mark">恭喜您，成功获得<span class="modal-amount">0.00</span>元红包!</div>
+                        <div class="guide">可以前往个人中心-红包进行查看<a href="javascript:;">&gt;&gt;</a></div>
+                        <div class="reward">现在申请豪有钱，可以获得加倍红包奖励哟~</div>
+                        <div class="modal-action">
+                            <a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx875c67a4fc574d93&redirect_uri=http://idcwxtest.dafysz.cn/wechat-web/userProfile&response_type=code&scope=snsapi_base&state=1#wechat_redirect" class="btn-apply">立即申请</a>
+                        </div>
+                        <div class="tips">
+                            <h3>温馨提示：</h3>
+                            <ul>
+                                <li>1) 立即申请，可享受游戏红包x5倍红包金额奖励；</li>
+                                <li>2) 第2天申请，可享受游戏红包x3倍红包金额奖励；</li>
+                                <li>3) 第3、4、5天申请，可享受游戏红包x2倍红包金额奖励；</li>
+                                <li>4) 豪有钱申请成功后，游戏红包只能用于豪有钱账单还款抵扣，也可与其它红包叠加使用；</li>
+                                <li>5) 游戏红包从获得之日起，2个月内有效；</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="dafy-modal notify-modal" id="modal-subscribe" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+            <div class="modal-inner">
+                <section class="modal-section">
+                    <div class="notify">
+                        <div class="lucky"></div>
+                        <div class="notify-container">
+                            <div class="notify-message">您还没有绑定即有分期微信公众号哦~</div>
+                            <div class="notify-action">
+                                <a href="#" class="btn-cancel" data-close="关闭" data-dismiss="modal">取消</a>
+                                <a href="#bind" class="btn-bind" id="go-bind">立即绑定</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="dafy-modal notify-modal" id="modal-notify" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+            <div class="modal-inner">
+                <section class="modal-section">
+                    <div class="notify">
+                        <div class="lucky"></div>
+                        <div class="notify-container">
+                            <div class="notify-message" id="notify-msg"><!-- 您暂时还未拥有豪有钱资质哦，建议您获得资质后再来参与游戏~~ --></div>
+                            <!-- <div class="notify-message">您已经参加过游戏咯~</div> -->
+                            <div class="notify-action">
+                                <a href="#" class="btn-confirm" data-close="关闭" data-dismiss="modal">确定</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="dafy-modal notify-modal" id="modal-warn" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+            <div class="modal-inner">
+                <section class="modal-section">
+                    <div class="notify">
+                        <div class="lucky"></div>
+                        <div class="notify-container">
+                            <div class="notify-message">不好意思，网络出现故障！</div>
+                            <div class="notify-action">
+                                <a href="#" class="btn-confirm" data-close="关闭" data-dismiss="modal">确定</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="dafy-modal share-modal" id="modal-shareto" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+            <div class="modal-inner">
+                <a href="#" class="btn-confirm" data-close="关闭" data-dismiss="modal">确定</a>
+                <section class="shareto-image"><img src="images/wx-share.png" alt=""></section>
+            </div>
+        </section>
+
+        <script type="text/javascript" src="js/global.js"></script>
+        <script type="text/javascript" src="js/app.min.js"></script>
+        <script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+        <script type="text/javascript">
+        (function($) {
+            $(function() {
+                window.location.hash = '#';
+
+                Lottery.initialize();
+                Gameout.initialize();
+
+                window.addEventListener("hashchange",function(event){
+                    // console.info( 'event' );
+                    console.info( event );
+                });
+            });
+        })(jQuery);
+        </script>
+    </body>
+</html>

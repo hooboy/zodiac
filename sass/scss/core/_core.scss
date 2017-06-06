@@ -1,0 +1,113 @@
+// $wc White
+.wc {
+	color: $wc;
+}
+
+// Font Color
+.c {
+	color: $c;
+}
+
+// gray color
+.gc {
+	color: $gc;
+}
+.gc2 {
+	color: $gc2;
+}
+
+// orange color
+.oc {
+	color: $oc;
+}
+
+// Margin
+.mlr20{
+	margin: auto (20em/20);
+}
+.m20 {
+	margin: (20em/20) 0;
+}
+.m30 {
+	margin: (30em/20) 0;
+}
+.mt20 {
+	margin-top: (20em/20);
+}
+.mb20 {
+	margin-bottom: (20em/20);
+}
+.mt40 {
+	margin-top: (40em/20);
+}
+.mb40 {
+	margin-bottom: (40em/20);
+}
+.mt-20 {
+	margin-top: -(20em/20);
+}
+
+.h_box {
+	@include box;
+	//+display-box;
+	width: 100%;
+	.spacer {
+		width: (20em/20);
+	}
+}
+
+.flex_1 {
+	// @include flex(1);
+	width: 100%;
+}
+
+.flex_20 {
+	width: (20em/20);
+}
+
+.imgurl {
+	display: block;
+	background: $imgc url($imgurl + 'img_bg4.png') 50% 50% no-repeat;
+	@include background-size((190em/20) (190em/20));
+	width: 100%;
+	img {
+		width: 100%;
+	}
+}
+
+.title {
+	margin-bottom: (14em/20);
+	margin-top: (22em/20);
+	h3 {
+		font-size: $fz27;
+		color: #727377;
+	}
+}
+
+.fz20 {
+	font-size: $fz20;
+}
+
+.fz25 {
+	font-size: $fz25;
+}
+
+.fz27 {
+	font-size: $fz27;
+}
+
+.fz30 {
+	font-size: $fz30;
+}
+
+.fz32 {
+	font-size: $fz32;
+}
+
+.fz36 {
+	font-size: $fz36;
+}
+
+.fz46 {
+	font-size: $fz46;
+}
