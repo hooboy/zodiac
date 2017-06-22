@@ -1,5 +1,5 @@
 (function($, global) {
-    var win = window,
+    var win = global,
         location = win.location;
 
     var soundAudio = document.createElement('audio');
